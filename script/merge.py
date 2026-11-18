@@ -10,7 +10,7 @@ PLAYLISTS = [
     {"name": "SONYLIV",     "icon": "📺", "url": ""},
     {"name": "WILLOW",      "icon": "🏏", "url": ""},
     {"name": "PRIMEVIDEO",  "icon": "📺", "url": ""},
-    {"name": "VZY",         "icon": "🎬", "url": "https://premiumplugx.me/vzy/playlist.php"},
+    {"name": "VZY",         "icon": "🎬", "url": ""},
     {"name": "JIO-TV",      "icon": "📡", "url": "https://lemajekaat.streamxlive.workers.dev/"},
     {"name": "ZEE",         "icon": "📺", "url": ""},
     {"name": "SONY",        "icon": "📺", "url": ""},
