@@ -6,16 +6,16 @@ from datetime import datetime
 
 # ------------------ CONFIGURATION ------------------
 PLAYLISTS = [
-    {"name": "FANCODE",     "icon": "🏏", "url": ""},
-    {"name": "SONYLIV",     "icon": "📺", "url": "h"},
-    {"name": "WILLOW",      "icon": "🏏", "url": ""},
-    {"name": "PRIMEVIDEO",  "icon": "📺", "url": ""},
-    {"name": "VZY",         "icon": "🎬", "url": ""},
+    {"name": "FANCODE",     "icon": "🏏", "url": "https://raw.githubusercontent.com/doctor-8trange/zyphx8/refs/heads/main/data/fancode.m3u"},
+    {"name": "SONYLIV",     "icon": "📺", "url": "https://raw.githubusercontent.com/drmlive/sliv-live-events/refs/heads/main/sonyliv.m3u"},
+    {"name": "WILLOW",      "icon": "🏏", "url": "https://raw.githubusercontent.com/srhady/willow-event/refs/heads/main/live_sports.m3u"},
+    {"name": "PRIMEVIDEO",  "icon": "📺", "url": "https://raw.githubusercontent.com/doctor-8trange/tekzya9/refs/heads/main/data/primevideoindia.m3u"},
+    {"name": "VZY",         "icon": "🎬", "url": "https://premiumplugx.me/vzy/playlist.php"},
     {"name": "JIO-TV",      "icon": "📡", "url": "https://jiostbplus.saregojo99.workers.dev/m3u"},
     {"name": "ZEE",         "icon": "📺", "url": ""},
-    {"name": "SONY",        "icon": "📺", "url": ""},
+    {"name": "SONY",        "icon": "📺", "url": "https://raw.githubusercontent.com/sportlive18/Sonyliv-Playlist-Autoupdate/refs/heads/main/sony.m3u"},
     {"name": "SUN",         "icon": "☀️", "url": ""},
-    {"name": "Jio Hotstar", "icon": "⭐", "url": ""},
+    {"name": "Jio Hotstar", "icon": "⭐", "url": "https://mainplaylist.poonamchouhan076.workers.dev/"},
 ]
 
 OUTPUT_FILE = "Combined.m3u"
