@@ -1,44 +1,44 @@
 
-name: Merge M3U Playlists
+import urllib.request
+import os
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '*/30 * * * *'
+PLAYLISTS = [
+    {
+        "name": "JioSTB Plus",
+        "url": "https://jiostbplus.saregojo99.workers.dev/m3u"
+    },
+    {
+        "name": "SonyLIV",
+        "url": "https://raw.githubusercontent.com/sportlive18/Sonyliv-Playlist-Autoupdate/refs/heads/main/sonyliv.m3u"
+    }
+]
 
-permissions:
-  contents: write
+output = ["#EXTM3U"]
 
-jobs:
-  merge:
-    runs-on: ubuntu-latest
+for playlist in PLAYLISTS:
+    print("Downloading:", playlist["name"])
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    request = urllib.request.Request(
+        playlist["url"],
+        headers={"User-Agent": "Mozilla/5.0"}
+    )
 
-      - name: Download and Merge M3U
-        run: |
-          set -e
+    with urllib.request.urlopen(request, timeout=90) as response:
+        content = response.read().decode("utf-8-sig")
 
-          URL1="https://jiostbplus.saregojo99.workers.dev/m3u"
-          URL2="https://raw.githubusercontent.com/sportlive18/Sonyliv-Playlist-Autoupdate/refs/heads/main/sonyliv.m3u"
+    lines = content.splitlines()
 
-          curl -fLsS "$URL1" -o jio.m3u
-          curl -fLsS "$URL2" -o sony.m3u
+    for line in lines:
+        line = line.strip()
 
-          echo "#EXTM3U" > Combined.m3u
+        if line and line != "#EXTM3U":
+            output.append(line)
 
-          for file in jio.m3u sony.m3u; do
-            sed '1{/^#EXTM3U/d;}' "$file" >> Combined.m3u
-          done
+output_file = "Combined.m3u"
 
-          rm jio.m3u sony.m3u
+with open(output_file, "w", encoding="utf-8") as file:
+    file.write("\n".join(output) + "\n")
 
-      - name: Commit Updated Playlist
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Combined.m3u
-          git diff --cached --quiet || git commit -m "Update Combined M3U"
-          git push
+print("Merge completed successfully!")
+print("Total lines:", len(output))
+print("Output:", output_file)
