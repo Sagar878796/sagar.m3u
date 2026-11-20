@@ -3,14 +3,22 @@ import urllib.request
 from urllib.parse import urlparse, parse_qs
 
 PLAYLISTS = [
+        (
+        "SonyLIV",
+        "https://raw.githubusercontent.com/sportlive18/Sonyliv-Playlist-Autoupdate/refs/heads/main/sonyliv.m3u"
+        )
+    
     (
         "JioSTB Plus",
         "https://jiostbplus.saregojo99.workers.dev/m3u"
     ),
-    (
-        "SonyLIV",
-        "https://raw.githubusercontent.com/sportlive18/Sonyliv-Playlist-Autoupdate/refs/heads/main/sonyliv.m3u"
-    )
+    ("star tv"
+     "https://jiostbplus.saregojo99.workers.dev/m3u"
+    ),
+     ("fancode"
+      "https://raw.githubusercontent.com/doctor-8trange/zyphx8/refs/heads/main/data/fancode.m3u"
+     ),
+
 ]
 
 combined = ["#EXTM3U"]
