@@ -6,7 +6,7 @@ PLAYLISTS = [
         (
         "SonyLIV",
         "https://raw.githubusercontent.com/sportlive18/Sonyliv-Playlist-Autoupdate/refs/heads/main/sonyliv.m3u"
-        )
+        ),
     
     (
         "JioSTB Plus",
