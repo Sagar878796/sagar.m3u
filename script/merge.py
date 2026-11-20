@@ -11,7 +11,7 @@ PLAYLISTS = [
     {"name": "WILLOW",      "icon": "🏏", "url": ""},
     {"name": "PRIMEVIDEO",  "icon": "📺", "url": ""},
     {"name": "VZY",         "icon": "🎬", "url": ""},
-    {"name": "JIO-TV",      "icon": "📡", "url": "https://lemajekaat.streamxlive.workers.dev/"},
+    {"name": "JIO-TV",      "icon": "📡", "url": "https://jiostbplus.saregojo99.workers.dev/m3u"},
     {"name": "ZEE",         "icon": "📺", "url": ""},
     {"name": "SONY",        "icon": "📺", "url": ""},
     {"name": "SUN",         "icon": "☀️", "url": ""},
