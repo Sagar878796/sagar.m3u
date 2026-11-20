@@ -10,7 +10,7 @@ PLAYLISTS = [
     {"name": "SONYLIV",     "icon": "📺", "url": ""},
     {"name": "WILLOW",      "icon": "🏏", "url": ""},
     {"name": "PRIMEVIDEO",  "icon": "📺", "url": ""},
-    {"name": "VZY",         "icon": "🎬", "url": ""},
+    {"name": "VZY",         "icon": "🎬", "url": "https://raw.githubusercontent.com/sportlive18/Sonyliv-Playlist-Autoupdate/refs/heads/main/sonyliv.m3u"},
     {"name": "JIO-TV",      "icon": "📡", "url": "https://jiostbplus.saregojo99.workers.dev/m3u"},
     {"name": "ZEE",         "icon": "📺", "url": ""},
     {"name": "SONY",        "icon": "📺", "url": ""},
