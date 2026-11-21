@@ -12,7 +12,10 @@ PLAYLISTS = [
         "JioSTB Plus",
         "https://jiostbplus.saregojo99.workers.dev/m3u"
     ),
-
+(
+        "Fancode",
+        "https://premiumplugx.top/mylive/playlist.php"
+),
     (
         "Star TV",
         "https://mainplaylist.poonamchouhan076.workers.dev/"
